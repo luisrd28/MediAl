@@ -1,0 +1,19 @@
+.card {
+  width: 300px;
+  height: 254px;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2 {
+  width: 290px;
+  height: 244px;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  transition: all 0.2s;
+  /* You can add any additional styling here if needed */
+}
