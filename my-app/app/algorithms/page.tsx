@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import {Card, CardHeader, CardBody, CardFooter} from "@heroui/card";
+import {Card, CardHeader, CardBody} from "@heroui/card";
 import {Chip} from "@heroui/chip";
 import {Divider} from "@heroui/divider";
 
