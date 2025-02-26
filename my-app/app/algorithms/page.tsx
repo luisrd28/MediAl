@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import {Card, CardHeader, CardBody} from "@heroui/card";
-import {Chip} from "@heroui/chip";
-import {Divider} from "@heroui/divider";
+import { Card, CardHeader, CardBody } from "@heroui/card";
+import { Chip } from "@heroui/chip";
+import { Divider } from "@heroui/divider";
 
 export default function AlgorithmsPage() {
   return (
@@ -22,7 +22,7 @@ export default function AlgorithmsPage() {
 
       {/* Grid container for cards */}
       <div className="grid grid-cols-1 gap-4 justify-items-start">
-        {/* Clickable Card */}
+        {/* Existing Card */}
         <Link href="/algorithms/hepatitis-b">
           <Card className="w-[90%] md:w-[400px] cursor-pointer">
             {/* Card Header */}
@@ -44,6 +44,34 @@ export default function AlgorithmsPage() {
                   style={{ backgroundColor: "#52b788", color: "black" }}
                 >
                   Infectious Disease
+                </Chip>
+              </div>
+            </CardBody>
+          </Card>
+        </Link>
+
+        {/* New Card: Convulsive Status Epilepticus Management */}
+        <Link href="/algorithms/CSEmanagement">
+          <Card className="w-[90%] md:w-[400px] cursor-pointer">
+            {/* Card Header */}
+            <CardHeader>
+              <h2 className="text-lg font-bold">
+                Convulsive Status Epilepticus Management
+              </h2>
+            </CardHeader>
+            <Divider />
+            {/* Card Body */}
+            <CardBody className="relative">
+              <p>
+                This interactive algorithm allows you to manage CSE step by step ensuring optimal medical therapy.
+              </p>
+              {/* Chip positioned at the lower right within the card body */}
+              <div className="mt-4 flex justify-end">
+                <Chip
+                  className="rounded"
+                  style={{ backgroundColor: "#ffd166", color: "black" }}
+                >
+                  Neurology
                 </Chip>
               </div>
             </CardBody>

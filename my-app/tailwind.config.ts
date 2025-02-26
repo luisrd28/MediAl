@@ -7,7 +7,7 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@heroui/theme/dist/components/(card|chip|divider|ripple).js"
+    "./node_modules/@heroui/theme/dist/components/(button|card|chip|divider|link|modal|ripple|spinner).js"
   ],
   theme: {
   	extend: {
