@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
 import { Divider } from "@heroui/divider";
-import { Button} from "@heroui/button";
+import { Button } from "@heroui/button";
 import {
   Modal,
   ModalContent,
@@ -12,6 +12,7 @@ import {
   ModalFooter,
 } from "@heroui/modal";
 import { Link } from "@heroui/link";
+import { ShimmerButton } from "@/components/magicui/shimmer-button"; // New import
 
 // A simple implementation of useDisclosure.
 // If your UI library provides one, you can import it instead.
@@ -60,19 +61,19 @@ export default function Home() {
         <p className="font-bold">Definitions</p>
         <ul className="list-disc ml-5">
           <li>
-            Unremitting generalized convulsive seizure lasting longer than 5
-            minutes.
+            Unremitting generalized convulsive seizure lasting longer than 5 minutes.
           </li>
           <li>
-            Multiple bilateral convulsive seizures without an interictal return
-            to baseline LOC.
+            Multiple bilateral convulsive seizures without an interictal return to baseline LOC.
           </li>
         </ul>
       </CardBody>
       <Divider />
       <CardFooter>
         <div className="w-full flex justify-center">
-          <Button color="primary" onPress={() => navigateTo(2)}>Begin</Button>
+          <Button color="primary" onPress={() => navigateTo(2)}>
+            Begin
+          </Button>
         </div>
       </CardFooter>
     </Card>
@@ -87,26 +88,21 @@ export default function Home() {
       <Divider />
       <CardBody>
         <p className="font-bold text-red-500">
-          These steps should be performed simultaneously with the administration
-          of the first dose of benzodiazepine.
+          These steps should be performed simultaneously with the administration of the first dose of benzodiazepine.
         </p>
         <p className="font-bold mt-4">Obtain focused history.</p>
         <ul className="list-disc ml-5">
           <li>
-            Prehospital administration of benzodiazepines and any antiseizure
-            medication (ASM).
+            Prehospital administration of benzodiazepines and any antiseizure medication (ASM).
           </li>
           <li>Hx of epilepsy.</li>
           <li>
-            Presence of acute illness, toxic exposure, trauma, recent heavy
-            alcohol intake or cessation of chronic drinking, change in antiseizure
-            medication.
+            Presence of acute illness, toxic exposure, trauma, recent heavy alcohol intake or cessation of chronic drinking, change in antiseizure medication.
           </li>
           <li>Current medications.</li>
           <li>Prior status epilepticus, history of treatment response.</li>
-          <li> Evaluate Airway, Breathing, and Circulation.
+          <li>Evaluate Airway, Breathing, and Circulation.</li>
           <li>Look for signs of trauma, sepsis, anisocoria or meningitis.</li>
-          </li>
         </ul>
       </CardBody>
       <Divider />
@@ -135,8 +131,7 @@ export default function Home() {
           <Divider />
           <CardBody>
             <p className="font-bold text-red-500">
-              These steps should be performed simultaneously with the administration
-              of the first dose of benzodiazepine.
+              These steps should be performed simultaneously with the administration of the first dose of benzodiazepine.
             </p>
             <ul className="list-disc ml-5 mt-4">
               <li>
@@ -182,9 +177,7 @@ export default function Home() {
                     <li>Apnea or inadequate ventilation.</li>
                     <li>Hypoxemia.</li>
                     <li>Status epilepticus lasting ≥ 30 min.</li>
-                    <li>
-                      Need to protect the airway for urgent brain imaging.
-                    </li>
+                    <li>Need to protect the airway for urgent brain imaging.</li>
                   </ol>
                 </ModalBody>
                 <ModalFooter>
@@ -267,8 +260,12 @@ export default function Home() {
               </ul>
             </div>
             <div className="mt-4 flex justify-center space-x-2">
-              <Button color="primary" variant="flat" onPress={dosageBZDModal.onOpen}>Dosage BZD</Button>
-              <Button color="primary" variant="flat" onPress={dosageASMModal.onOpen}>Dosage ASM</Button>
+              <Button color="primary" variant="flat" onPress={dosageBZDModal.onOpen}>
+                Dosage BZD
+              </Button>
+              <Button color="primary" variant="flat" onPress={dosageASMModal.onOpen}>
+                Dosage ASM
+              </Button>
             </div>
           </CardBody>
           <Divider />
@@ -392,13 +389,10 @@ export default function Home() {
   );
 
   // Card 6: Seizure continues after 5-10 min
-  // Note: Here the Back button explicitly goes to Card 4.
   const Card6 = () => (
     <Card className="max-w-[400px] mx-auto">
       <CardHeader>
-        <h2 className="text-lg font-bold">
-          Seizure continues after 5-10 min
-        </h2>
+        <h2 className="text-lg font-bold">Seizure continues after 5-10 min</h2>
       </CardHeader>
       <Divider />
       <CardBody>
@@ -420,13 +414,10 @@ export default function Home() {
   );
 
   // Card 7: Seizure continues after 15 min
-  // "Back" here goes to Card 6.
   const Card7 = () => (
     <Card className="max-w-[400px] mx-auto">
       <CardHeader>
-        <h2 className="text-lg font-bold">
-          Seizure continues after 15 min
-        </h2>
+        <h2 className="text-lg font-bold">Seizure continues after 15 min</h2>
       </CardHeader>
       <Divider />
       <CardBody>
@@ -444,7 +435,7 @@ export default function Home() {
       <CardFooter>
         <div className="flex justify-between w-full">
           <Button onPress={() => navigateTo(6)}>Back</Button>
-          <Button color="success"onPress={() => navigateTo(5)}>Seizure stops</Button>
+          <Button color="success" onPress={() => navigateTo(5)}>Seizure stops</Button>
           <Button color="danger" onPress={() => navigateTo(8)}>
             Seizure continues
           </Button>
@@ -454,13 +445,10 @@ export default function Home() {
   );
 
   // Card 8: Seizure continues after 30 min
-  // "Back" explicitly goes to Card 7.
   const Card8 = () => (
     <Card className="max-w-[400px] mx-auto">
       <CardHeader>
-        <h2 className="text-lg font-bold">
-          Seizure continues after 30 min
-        </h2>
+        <h2 className="text-lg font-bold">Seizure continues after 30 min</h2>
       </CardHeader>
       <Divider />
       <CardBody>
@@ -511,8 +499,21 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      {renderCard()}
+    <div className="min-h-screen bg-gray-100 relative">
+      {/* Global Back Button positioned at the top left */}
+      <div className="absolute top-4 left-4">
+        <Link href="/algorithms">
+          <ShimmerButton className="shadow-2xl">
+            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white lg:text-lg">
+              Back
+            </span>
+          </ShimmerButton>
+        </Link>
+      </div>
+      {/* Centered content */}
+      <div className="flex items-center justify-center min-h-screen">
+        {renderCard()}
+      </div>
     </div>
   );
 }
